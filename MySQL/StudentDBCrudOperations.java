@@ -1,5 +1,4 @@
-package com.example;
-
+package com.test;
 
 
 /*Create Crude operation for students details accepting the  input from user for confirming the operations
@@ -32,7 +31,10 @@ public class StudentDBCrudOperations
         Class.forName("com.mysql.cj.jdbc.Driver"); 
 
         // Step 2: Establishing a database connection
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/acpproject", "root", "newpass");
+        Connection connection = DriverManager.getConnection(
+        		"jdbc:mysql://localhost:3306/eclipse",
+        		"root",
+        		"root");
 
         // Step 3: Creating a Statement
         Statement stmt = connection.createStatement();
@@ -267,4 +269,3 @@ public class StudentDBCrudOperations
         connection.close();
     }
 }
-
